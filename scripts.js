@@ -12,24 +12,18 @@ function createGrid(size) {
     for (let i = 0; i < size; i++) {
       const smallBox = document.createElement("div");
       smallBox.classList.add("smallBox");
-      // smallBox.textContent = "Small";
 
       grid.appendChild(smallBox);
     }
   });
 }
 
-// document.addEventListener("DOMContentLoaded", () => {});
+document.addEventListener("DOMContentLoaded", createGrid(16));
 
 const button = document.querySelector("button");
 const size = document.querySelector("#size");
 
 button.addEventListener("click", (event) => {
-  // console.log(event.target);
-  // const container = document.querySelector("#container");
-  // container.remove();
-
-  // const newContainer = document.createElement("div");
   const size = document.querySelector("#size");
   const container = document.getElementById("container");
   const body = document.querySelector("body");
