@@ -9,6 +9,7 @@
   flex-direction: column;
   width: 100%;
   height: 95vh;
+  /* border: 1px solid black; */
 }
 
 .bigBox {
@@ -18,5 +19,9 @@
 
 .smallBox {
   border: 1px solid black;
-  flex-grow: 1;
+  flex: 1;
 }
+
+/* .changeColor {
+  background-color: red;
+} */
