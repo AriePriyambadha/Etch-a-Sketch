@@ -1,0 +1,48 @@
+function createGrid(size) {
+  const container = document.querySelector("#container");
+
+  for (let i = 0; i < size; i++) {
+    container.append(document.createElement("div"));
+  }
+
+  const divGrid = document.querySelectorAll("div div");
+  divGrid.forEach((grid) => {
+    grid.classList.add("bigBox");
+
+    for (let i = 0; i < size; i++) {
+      const smallBox = document.createElement("div");
+      smallBox.classList.add("smallBox");
+      // smallBox.textContent = "Small";
+
+      grid.appendChild(smallBox);
+    }
+  });
+}
+
+// document.addEventListener("DOMContentLoaded", () => {});
+
+const button = document.querySelector("button");
+const size = document.querySelector("#size");
+
+button.addEventListener("click", (event) => {
+  // console.log(event.target);
+  // const container = document.querySelector("#container");
+  // container.remove();
+
+  // const newContainer = document.createElement("div");
+  const size = document.querySelector("#size");
+  const container = document.getElementById("container");
+  const body = document.querySelector("body");
+
+  console.log(container);
+
+  if (container) {
+    container.remove();
+
+    const newContainer = document.createElement("div");
+    newContainer.id = "container";
+    document.body.appendChild(newContainer);
+
+    createGrid(+size.value);
+  }
+});

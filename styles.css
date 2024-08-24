@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 95vh;
+}
+
+.bigBox {
+  display: flex;
+  flex: 1;
+}
+
+.smallBox {
+  border: 1px solid black;
+  flex-grow: 1;
+}
